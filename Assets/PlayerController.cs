@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
 
@@ -9,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 direction;
     Vector2 movement;
-
+    public Transform InteractorSource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +20,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (direction != Vector2.zero) // Only update when moving
+        {
+            InteractorSource.localPosition = direction.normalized * 0.5f; // Move InteractorSource in the movement direction
+        }
     }
 
     private void FixedUpdate()
