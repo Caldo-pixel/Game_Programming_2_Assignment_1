@@ -23,7 +23,7 @@ public class Door : MonoBehaviour, IInteractable
 
         // Add your door-opening logic here
         // For example, rotate the door or move it out of the way
-        transform.Rotate(0, 0, -90); // Rotate the door 90 degrees to "open" it
+        transform.parent.Rotate(0, 0, -90); // Rotate the door 90 degrees to "open" it
     }
 
     private void CloseDoor()
@@ -33,6 +33,6 @@ public class Door : MonoBehaviour, IInteractable
 
         // Add your door-closing logic here
         // For example, rotate the door back to its original position
-        transform.Rotate(0, 0, 90); // Rotate the door back to its original position
+        transform.parent.Rotate(0, 0, 90);  // Rotate the door back to its original position
     }
 }
