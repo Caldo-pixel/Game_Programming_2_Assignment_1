@@ -24,6 +24,37 @@ public class Animal
     {
 
     }
+}
 
+public class Alligator : Animal
+{
+    public float stealthLevel;
 
+    public void Swim()
+    {
+
+    }
+}
+
+public class Meerkat : Animal
+{
+    public void Stand()
+    {
+
+    }
+}
+
+public class Zebra : Animal
+{
+    
+}
+
+public class Penguin : Animal
+{
+    public float cutenessLevel;
+
+    public void Slide()
+    {
+
+    }
 }
