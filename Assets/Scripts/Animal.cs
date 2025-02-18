@@ -28,9 +28,9 @@ public class Animal
 
 public class Alligator : Animal
 {
-    public float stealthLevel;
+    public float rotationalPower;
 
-    public void Swim()
+    public void Deathroll()
     {
 
     }
@@ -38,6 +38,8 @@ public class Alligator : Animal
 
 public class Meerkat : Animal
 {
+    public float threatLevel;
+
     public void Stand()
     {
 
@@ -46,7 +48,12 @@ public class Meerkat : Animal
 
 public class Zebra : Animal
 {
-    
+    public float stealthLevel;
+
+    public void Hide()
+    {
+
+    }
 }
 
 public class Penguin : Animal
