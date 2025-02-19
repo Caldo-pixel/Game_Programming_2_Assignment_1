@@ -3,6 +3,7 @@ using UnityEngine;
 interface IInteractable
 {
     void Interact();
+    void InteractFed();
 }
 
 public class Interactor : MonoBehaviour
@@ -13,6 +14,10 @@ public class Interactor : MonoBehaviour
 
     private Vector2 lastMoveDirection; // Stores the last movement direction
 
+    private void Start()
+    {
+
+    }
     void Update()
     {
         // Get player input for movement
@@ -37,6 +42,28 @@ public class Interactor : MonoBehaviour
                 if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
                 {
                     interactObj.Interact();
+                }
+            }
+            else
+            {
+                Debug.Log("Raycast did not hit anything.");
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            RaycastHit2D hitInfo = Physics2D.Raycast(InteractorSource.position, lastMoveDirection, InteractRange, interactableLayer);
+
+            if (hitInfo.collider != null)
+            {
+                Debug.Log("Raycast hit: " + hitInfo.collider.name);
+                if (hitInfo.collider.CompareTag("animal"))
+                {
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    {
+                        interactObj.InteractFed();  
+                    }
                 }
             }
             else

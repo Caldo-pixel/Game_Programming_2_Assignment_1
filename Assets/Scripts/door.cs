@@ -15,6 +15,10 @@ public class Door : MonoBehaviour, IInteractable
             OpenDoor();
         }
     }
+    public void InteractFed()
+    {
+        // doesn't do anything.
+    }
 
     private void OpenDoor()
     {
