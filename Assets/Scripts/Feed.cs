@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Feed : MonoBehaviour, IInteractable
 {
+    public GameObject alligatorSprite;
+
     private bool isFed = false;
 
     Alligator alligator = new Alligator();
@@ -33,6 +35,8 @@ public class Feed : MonoBehaviour, IInteractable
         meerkat.hunger = 0;
         zebra.hunger = 0;
         penguin.hunger = 5;
+
+        
     }
 
     private void Fed()
