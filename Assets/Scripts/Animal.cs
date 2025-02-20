@@ -10,9 +10,6 @@ public abstract class Animal
     public float height;
     public float hunger;
     public float energy;
-    public float excitment;
-    public Color color;
-
     public abstract void Eat();
 
 }
