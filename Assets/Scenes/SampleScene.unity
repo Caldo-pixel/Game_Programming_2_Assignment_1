@@ -2841,6 +2841,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1701373596729173682, guid: 67283a0cae6e6bb4ca9038fde86805b9, type: 3}
       propertyPath: m_Name
+      value: zebra
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701373596729173682, guid: 67283a0cae6e6bb4ca9038fde86805b9, type: 3}
+      propertyPath: m_TagString
       value: Zebra
       objectReference: {fileID: 0}
     - target: {fileID: 1969123515974783736, guid: 67283a0cae6e6bb4ca9038fde86805b9, type: 3}
@@ -2946,6 +2950,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4893077580916608422, guid: ad6875e1a53760349bdd643407a4023f, type: 3}
       propertyPath: m_Name
+      value: meerkat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893077580916608422, guid: ad6875e1a53760349bdd643407a4023f, type: 3}
+      propertyPath: m_TagString
       value: Meerkat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3007,11 +3015,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2649611267869075834, guid: 07f4881876a0c0f4392f982a5078cbd8, type: 3}
       propertyPath: m_Name
-      value: Alligator
+      value: alligator
       objectReference: {fileID: 0}
     - target: {fileID: 2649611267869075834, guid: 07f4881876a0c0f4392f982a5078cbd8, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649611267869075834, guid: 07f4881876a0c0f4392f982a5078cbd8, type: 3}
+      propertyPath: m_TagString
+      value: Alligator
       objectReference: {fileID: 0}
     - target: {fileID: 5435302110829755193, guid: 07f4881876a0c0f4392f982a5078cbd8, type: 3}
       propertyPath: player
@@ -3076,6 +3088,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1663357499305963809, guid: a581e22f2160c1e44ab897436c6a9261, type: 3}
       propertyPath: m_Name
+      value: penguin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663357499305963809, guid: a581e22f2160c1e44ab897436c6a9261, type: 3}
+      propertyPath: m_TagString
       value: Penguin
       objectReference: {fileID: 0}
     - target: {fileID: 4981313266516022498, guid: a581e22f2160c1e44ab897436c6a9261, type: 3}

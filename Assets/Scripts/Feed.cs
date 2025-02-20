@@ -39,7 +39,7 @@ public class Feed : MonoBehaviour, IInteractable
     {
         isFed = true;
         alligator.Eat();
-        Debug.Log("Yummy!");
+        Debug.Log("YUM!");
     }
     // Update is called once per frame
 

@@ -43,7 +43,7 @@ public class Alligator : Animal
     public void Deathroll()
     {
         rotationalPower = 10f;
-        Debug.Log("He Halth Rolled.");
+        Debug.Log("He Halth Rolled. His power holds a strength of " + rotationalPower);
     }
 }
 
@@ -65,7 +65,7 @@ public class Zebra : Animal
     public void Hide()
     {
         stealthLevel = stealthLevel + 3;
-        Debug.Log("Zebra is hiding... Where'd he go?");
+        Debug.Log("Zebra ran off and hid... Where'd he go?");
     }
 }
 

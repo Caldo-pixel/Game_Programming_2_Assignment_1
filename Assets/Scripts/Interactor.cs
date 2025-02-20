@@ -14,6 +14,11 @@ public class Interactor : MonoBehaviour
 
     private Vector2 lastMoveDirection; // Stores the last movement direction
 
+    Alligator alli = new Alligator();
+    Meerkat meerk = new Meerkat();
+    Zebra zebr = new Zebra();
+    Penguin pengu = new Penguin();
+
     private void Start()
     {
 
@@ -57,18 +62,46 @@ public class Interactor : MonoBehaviour
 
             if (hitInfo.collider != null)
             {
-                Debug.Log("Raycast hit: " + hitInfo.collider.name);
-                if (hitInfo.collider.CompareTag("animal"))
+                Debug.Log("You have fed the " + hitInfo.collider.name);
+                if (hitInfo.collider.CompareTag("Alligator"))
                 {
                     if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
                     {
-                        interactObj.InteractFed();  
+                        interactObj.InteractFed();                        
+                        alli.Deathroll();
+                    }
+                }
+
+                else if (hitInfo.collider.CompareTag("Meerkat"))
+                {
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    {
+                        interactObj.InteractFed();
+                        meerk.Stand();
+                    }
+                }
+
+                else if (hitInfo.collider.CompareTag("Penguin"))
+                {
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    {
+                        interactObj.InteractFed();
+                        pengu.Slide();
+                    }
+                }
+
+                else if (hitInfo.collider.CompareTag("Zebra"))
+                {
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    {
+                        interactObj.InteractFed();
+                        zebr.Hide();
                     }
                 }
             }
             else
             {
-                Debug.Log("Raycast did not hit anything.");
+                Debug.Log("You dropped your feed into the grass. Good job.");
             }
         }
     }
