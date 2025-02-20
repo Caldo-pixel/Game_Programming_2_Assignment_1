@@ -1,7 +1,8 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Animal
+// TODO - Make this abstract
+public abstract class Animal
 {
     public int age;
     public float speed;
@@ -12,28 +13,8 @@ public class Animal
     public float excitment;
     public Color color;
 
-    public void Eat()
-    {
-        hunger = 0.0f;
-        energy = energy + 2;
-    }
+    public abstract void Eat();
 
-    public void Play()
-    {
-        energy = energy - 2;
-        hunger = hunger + 2;
-    }
-
-    public void Joy()
-    {
-        excitment = excitment + 2;
-        energy = energy + 1;
-    }
-
-    public void Sleep()
-    {
-        energy = 10;
-    }
 }
 
 public class Alligator : Animal
@@ -44,6 +25,14 @@ public class Alligator : Animal
     {
         rotationalPower = 10f;
         Debug.Log("He Halth Rolled. His power holds a strength of " + rotationalPower);
+    }
+
+    public override void Eat()
+    {
+        hunger = 0.0f;
+        energy = energy + 2;
+
+        Debug.Log("RAAAAAAAAAAAAAH");
     }
 }
 
@@ -56,6 +45,13 @@ public class Meerkat : Animal
         threatLevel = threatLevel + 1;
         Debug.Log("Meerkat is staring into your soul.");
     }
+    public override void Eat()
+    {
+        hunger = 0.0f;
+        energy = energy + 2;
+
+        Debug.Log("rEEEEEEEEEEEEEEEEEEEEE!");
+    }
 }
 
 public class Zebra : Animal
@@ -67,6 +63,13 @@ public class Zebra : Animal
         stealthLevel = stealthLevel + 3;
         Debug.Log("Zebra ran off and hid... Where'd he go?");
     }
+    public override void Eat()
+    {
+        hunger = 0.0f;
+        energy = energy + 2;
+
+        Debug.Log("HUHN HUHN HUHN HUHN!");
+    }
 }
 
 public class Penguin : Animal
@@ -77,5 +80,12 @@ public class Penguin : Animal
     {
         cutenessLevel = 10;
         Debug.Log("Prepare to explode of cuteness.");
+    }
+    public override void Eat()
+    {
+        hunger = 0.0f;
+        energy = energy + 2;
+
+        Debug.Log("FLOP FLOP FLOP");
     }
 }

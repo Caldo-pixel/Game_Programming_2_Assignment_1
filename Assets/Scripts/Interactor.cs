@@ -48,17 +48,14 @@ public class Interactor : MonoBehaviour
 
             if (hitInfo.collider != null)
             {
+                Signs signs = hitInfo.collider.gameObject.GetComponent<Signs>();
+                signs.Interact();
                 Debug.Log("Raycast hit: " + hitInfo.collider.name);
-                if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
-                {
-                    interactObj.Interact();
-                }
             }
             else
             {
                 Debug.Log("Raycast did not hit anything.");
             }
-
         }
 
         if (Input.GetKeyDown(KeyCode.F))
@@ -70,38 +67,30 @@ public class Interactor : MonoBehaviour
                 Debug.Log("You have fed the " + hitInfo.collider.name);
                 if (hitInfo.collider.CompareTag("Alligator"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
-                    {
-                        interactObj.AnimalFood();                        
-                        alli.Deathroll();
-                    }
+                    Feed feed = hitInfo.collider.gameObject.GetComponent<Feed>();
+                    feed.AnimalFood();
+                    alli.Deathroll();
                 }
 
                 else if (hitInfo.collider.CompareTag("Meerkat"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
-                    {
-                        interactObj.AnimalFood();
-                        meerk.Stand();
-                    }
+                    Feed feed = hitInfo.collider.gameObject.GetComponent<Feed>();
+                    feed.AnimalFood();
+                    meerk.Stand();
                 }
 
                 else if (hitInfo.collider.CompareTag("Penguin"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
-                    {
-                        interactObj.AnimalFood();
-                        pengu.Slide();
-                    }
+                    Feed feed = hitInfo.collider.gameObject.GetComponent<Feed>();
+                    feed.AnimalFood();
+                    pengu.Slide();
                 }
 
                 else if (hitInfo.collider.CompareTag("Zebra"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
-                    {
-                        interactObj.AnimalFood();
-                        zebr.Hide();
-                    }
+                    Feed feed = hitInfo.collider.gameObject.GetComponent<Feed>();
+                    feed.AnimalFood();
+                    zebr.Hide();
                 }
             }
             else
