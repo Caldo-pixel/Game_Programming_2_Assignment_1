@@ -10,11 +10,6 @@ public class Signs : MonoBehaviour, IInteractable
         isReading = true;
     }
 
-    public void InteractFed()
-    {
-        // Doesn't do Anything
-    }
-
     void Update()
     {
         if (isReading == true)
