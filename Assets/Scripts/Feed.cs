@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class Feed : MonoBehaviour, IInteractable
+public class Feed : MonoBehaviour, IFeed
 {
-    public GameObject alligatorSprite;
-
     private bool isFed = false;
 
     Alligator alligator = new Alligator();
@@ -11,7 +9,7 @@ public class Feed : MonoBehaviour, IInteractable
     Zebra zebra = new Zebra();
     Penguin penguin = new Penguin();
 
-    public void InteractFed()
+    public void AnimalFood()
     {
         if (isFed)
         {
@@ -21,11 +19,6 @@ public class Feed : MonoBehaviour, IInteractable
         {
             Fed();
         }
-    }
-
-    public void Interact()
-    {
-        // Doesnt Do anything
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

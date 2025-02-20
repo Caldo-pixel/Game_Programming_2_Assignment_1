@@ -3,7 +3,12 @@ using UnityEngine;
 interface IInteractable
 {
     void Interact();
-    void InteractFed();
+    
+}
+
+interface IFeed
+{
+    void AnimalFood();
 }
 
 public class Interactor : MonoBehaviour
@@ -65,36 +70,36 @@ public class Interactor : MonoBehaviour
                 Debug.Log("You have fed the " + hitInfo.collider.name);
                 if (hitInfo.collider.CompareTag("Alligator"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
                     {
-                        interactObj.InteractFed();                        
+                        interactObj.AnimalFood();                        
                         alli.Deathroll();
                     }
                 }
 
                 else if (hitInfo.collider.CompareTag("Meerkat"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
                     {
-                        interactObj.InteractFed();
+                        interactObj.AnimalFood();
                         meerk.Stand();
                     }
                 }
 
                 else if (hitInfo.collider.CompareTag("Penguin"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
                     {
-                        interactObj.InteractFed();
+                        interactObj.AnimalFood();
                         pengu.Slide();
                     }
                 }
 
                 else if (hitInfo.collider.CompareTag("Zebra"))
                 {
-                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IFeed interactObj))
                     {
-                        interactObj.InteractFed();
+                        interactObj.AnimalFood();
                         zebr.Hide();
                     }
                 }
