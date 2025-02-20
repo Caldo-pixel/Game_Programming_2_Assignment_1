@@ -65,7 +65,12 @@ public class Interactor : MonoBehaviour
             if (hitInfo.collider != null)
             {
                 Debug.Log("You have fed the " + hitInfo.collider.name);
-                if (hitInfo.collider.CompareTag("Alligator"))
+                if (hitInfo.collider.CompareTag("Sign"))
+                {
+                    Debug.Log("Good Job- The Sign grows and inch.");
+                }
+
+                else if (hitInfo.collider.CompareTag("Alligator"))
                 {
                     Feed feed = hitInfo.collider.gameObject.GetComponent<Feed>();
                     feed.AnimalFood();

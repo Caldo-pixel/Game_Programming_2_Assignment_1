@@ -22,23 +22,4 @@ public class Signs : MonoBehaviour, IInteractable
         }
     }
 
-    //void Reading()
-    //{
-    //    isReading = true;
-    //
-    //    if (isReading == true)
-    //    {
-    //        signText.SetActive(true);
-    //    }
-    //    else
-    //    {
-    //        signText.SetActive(false);
-    //    }
-    //}
-    //void NotReading()
-    //{
-    //    isReading = false;
-    //    signText.SetActive(false);
-    //}
-    //
 }

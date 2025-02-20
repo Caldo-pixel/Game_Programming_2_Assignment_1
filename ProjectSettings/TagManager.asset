@@ -9,6 +9,7 @@ TagManager:
   - Meerkat
   - Penguin
   - Zebra
+  - Sign
   layers:
   - Default
   - TransparentFX

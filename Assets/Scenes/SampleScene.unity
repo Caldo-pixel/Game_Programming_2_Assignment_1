@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sign
       objectReference: {fileID: 0}
+    - target: {fileID: 5160388923343852993, guid: 29219828790479743b20be446913eb33, type: 3}
+      propertyPath: m_TagString
+      value: Sign
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -689,6 +693,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5160388923343852993, guid: 29219828790479743b20be446913eb33, type: 3}
       propertyPath: m_Name
+      value: Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160388923343852993, guid: 29219828790479743b20be446913eb33, type: 3}
+      propertyPath: m_TagString
       value: Sign
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1985,6 +1993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sign
       objectReference: {fileID: 0}
+    - target: {fileID: 5160388923343852993, guid: 29219828790479743b20be446913eb33, type: 3}
+      propertyPath: m_TagString
+      value: Sign
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2237,6 +2249,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5160388923343852993, guid: 29219828790479743b20be446913eb33, type: 3}
       propertyPath: m_Name
+      value: Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160388923343852993, guid: 29219828790479743b20be446913eb33, type: 3}
+      propertyPath: m_TagString
       value: Sign
       objectReference: {fileID: 0}
     m_RemovedComponents: []
